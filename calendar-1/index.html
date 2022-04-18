@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar App Vanilla JS</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="header">
+            <div id="monthDisplay"></div>
+            <div>
+                <button id="backButton">Предишен Mесец</button>
+                <button id="nextButton">Следващ Месец</button>
+            </div>
+        </div>
+
+        <div id="weekdays">
+            <div>Sunday</div>
+            <div>Monday</div>
+            <div>Tuesday</div>
+            <div>Wednesday</div>
+            <div>Thursday</div>
+            <div>Friday</div>
+            <div>Saturday</div>
+        </div>
+
+        <div id="calendar"></div>
+    </div>
+
+    <div id="newEventModal">
+        <div class="small"><img src="/assets/reservations.jpg"></div>
+
+        <h2>Нова Резервация</h2>
+        <h3>Детски Център</h3>
+        <hr class="rounded">
+
+        <label for="cars">Избери час:</label>
+        <select id="time">
+            <option value="10:00">10:00</option>
+            <option value="12:00">12:00</option>
+            <option value="14:00">14:00</option>
+            <option value="16:00">16:00</option>
+        </select>
+
+        <br><br>
+        <label>Име: <input type="name" id="names" placeholder="Име" /> </label>
+        <br><br>
+        <label>Години: <input type="number" id="age" placeholder="Години" /> </label>
+        <br><br>
+        <label>Телефон: <input type="number" id="phone" placeholder="089......." /> </label>
+        <br><br>
+        <label>Капаро: <input type="number" id="kaparo" placeholder="50лв." /> </label>
+        <br><br>
+        <hr class="rounded">
+
+        <textarea placeholder="Друго..." name="other" id="other" cols="10" rows="5"></textarea>
+
+        <button id="saveButton">Запази</button>
+        <button id="editButton">ОК</button>
+        <button id="deleteButton">Изтрий</button>
+        <button id="cancelButton">Откажи</button>
+    </div>
+
+    <div id="deleteEventModal">
+
+        <h2>Резервация на: <b>
+                <p><text id="име"></text></p>
+            </b>
+            <b>
+                <p style="color: #d36c6c;"><text id="години"></text>
+            </b> години</p>
+        </h2>
+
+        <hr class="rounded">
+        Дата:<b> <text id="дата"></text></b>
+        <hr class="rounded">
+        Час: <b><text id="час"></text>ч.</b>
+        <hr class="rounded">
+        Телефон: <b><text id="телефон"></text></b>
+        <hr class="rounded">
+        Капаро: <b><text id="капаро"></text></b>
+        <hr class="rounded">
+        Друго: <b><text id="друго"></text></b>
+        <hr class="rounded">
+
+        <button id="editBtn">Редактирай</button>
+        <button id="deleteBtn">Изтрий</button>
+        <button id="closeButton">Откажи</button>
+    </div>
+
+    <div id="modalBackDrop"></div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
